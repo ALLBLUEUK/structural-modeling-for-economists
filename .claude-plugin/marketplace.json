@@ -1,7 +1,5 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "strucmod-marketplace",
-  "description": "Single-plugin marketplace for strucmod — an agent-assisted structural modeling and academic-paper composition pipeline for economics graduate research (DSGE, CGE, heterogeneous-agent, dynamic programming).",
   "owner": {
     "name": "Jia Ningyuan",
     "email": "0337003370@uibe.edu.cn"
