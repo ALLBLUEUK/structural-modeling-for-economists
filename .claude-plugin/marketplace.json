@@ -15,11 +15,7 @@
         "email": "0337003370@uibe.edu.cn"
       },
       "category": "research",
-      "source": {
-        "source": "git",
-        "url": "https://github.com/ALLBLUEUK/structural-modeling-for-economists.git",
-        "ref": "main"
-      },
+      "source": "./",
       "keywords": [
         "economics",
         "structural-modeling",

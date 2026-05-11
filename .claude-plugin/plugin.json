@@ -20,10 +20,6 @@
     "reproducible-research",
     "claude-code"
   ],
-  "skills": "./skills",
-  "agents": "./agents",
-  "hooks": "./hooks",
-  "commands": "./commands",
   "config": {
     "default_project_layout": {
       "paper": "paper/",
