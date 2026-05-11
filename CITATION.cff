@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "Codex Structural Modeling for Economists: An agent-universal workflow scaffold for graduate-level structural modeling and dynamic simulation"
+message: "If you use this workflow in research or teaching, please cite as below."
+type: software
+authors:
+  - family-names: "Jia"
+    given-names: "Ningyuan"
+    affiliation: "University of International Business and Economics (UIBE), School of International Trade and Economics"
+    email: "0337003370@uibe.edu.cn"
+repository-code: "https://github.com/<TODO_ALLBLUEUK>/structural-modeling-for-economists"
+license: MIT
+keywords:
+  - DSGE
+  - CGE
+  - heterogeneous agents
+  - dynamic programming
+  - AI agent
+  - Codex
+  - Claude Code
+  - reproducible research
+  - economics
+abstract: "An agent-universal Git-cloneable project scaffold that helps graduate students and researchers build, calibrate, solve, simulate, and write up structural economic models (DSGE, CGE/GTAP, heterogeneous-agent, dynamic programming) with the assistance of AI agents (Codex CLI, Claude Code, Cursor, etc.). Includes 23 task-specific skills, 6 reviewer subagent specs, 5 cross-process rules, language-agnostic templates and CLI tooling."
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Jia"
+      given-names: "Ningyuan"
+  title: "Codex Structural Modeling for Economists"
+  year: 2026
+  url: "https://github.com/<TODO_ALLBLUEUK>/structural-modeling-for-economists"
+  notes: "Output of UIBE 2025 Graduate Education Reform Project (AI+Research category)."

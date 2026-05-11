@@ -1,0 +1,16 @@
+# Aider configuration for a strucmod project.
+# Aider reads this file when launched in the project root.
+
+read:
+  - AGENTS.md
+  # The lines below assume the plugin is installed at .claude/plugins/strucmod/.
+  # If installed globally at ~/.claude/plugins/strucmod/ instead, edit the paths.
+  - .claude/plugins/strucmod/skills/strucmod/SKILL.md
+  - .claude/plugins/strucmod/rules/orchestrator-protocol.md
+  - .claude/plugins/strucmod/rules/plan-first-modeling.md
+  - .claude/plugins/strucmod/rules/academic-writing-style.md
+  - .claude/plugins/strucmod/rules/numerical-validation-protocol.md
+  - .claude/plugins/strucmod/rules/modeling-coding-conventions.md
+
+# Canonical instruction source: AGENTS.md.
+# Plugin skills / agents / rules: <plugin-root>/skills,agents,rules.

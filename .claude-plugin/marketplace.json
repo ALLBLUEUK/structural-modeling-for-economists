@@ -1,0 +1,36 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "strucmod-marketplace",
+  "description": "Single-plugin marketplace for strucmod — an agent-assisted structural modeling and academic-paper composition pipeline for economics graduate research (DSGE, CGE, heterogeneous-agent, dynamic programming).",
+  "owner": {
+    "name": "Jia Ningyuan",
+    "email": "0337003370@uibe.edu.cn"
+  },
+  "plugins": [
+    {
+      "name": "strucmod",
+      "description": "Plan → calibrate → solve → simulate → write a real academic paper. 30+ skills (setup-dsge, setup-cge-gtap, setup-ha-bewley, calibrate-from-moments, solve-perturbation, solve-vfi, simulate-irf, counterfactual-run, plus 7 paper-composition skills) and 7 review subagents that together turn one natural-language research question into a publication-grade LaTeX manuscript with figures and a bibliography. Output of UIBE Graduate Education Reform Project.",
+      "author": {
+        "name": "Jia Ningyuan",
+        "email": "0337003370@uibe.edu.cn"
+      },
+      "category": "research",
+      "source": {
+        "source": "git",
+        "url": "https://github.com/ALLBLUEUK/structural-modeling-for-economists.git",
+        "ref": "main"
+      },
+      "keywords": [
+        "economics",
+        "structural-modeling",
+        "DSGE",
+        "CGE",
+        "heterogeneous-agent",
+        "dynamic-programming",
+        "academic-writing",
+        "reproducible-research"
+      ],
+      "homepage": "https://github.com/ALLBLUEUK/structural-modeling-for-economists"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+# ---- 数据保护：所有原始与衍生数据均不入版本控制 ----
+data/raw/*
+!data/raw/.gitkeep
+data/derived/*
+!data/derived/.gitkeep
+data/calibration/*
+!data/calibration/.gitkeep
+!data/calibration/**/manifest.json
+
+# ---- 日志 ----
+logs/*
+!logs/.gitkeep
+
+# ---- 检查点（求解后产物，体积可能大）----
+output/checkpoints/*
+!output/checkpoints/.gitkeep
+output/checkpoints/*.jld2
+output/checkpoints/*.mat
+output/checkpoints/*.gdx
+
+# ---- Dynare 副产物 ----
+*+.m
+*_set_auxiliary_variables.m
+*_dynamic.m
+*_static.m
+*_steadystate2.m
+*_objective_static.m
+*.log
+*.out
++*/
++*
+
+# ---- MATLAB ----
+*.asv
+*.mex*
+slprj/
+
+# ---- Julia ----
+Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# ---- LaTeX 副产物 ----
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# ---- GAMS ----
+*.lst
+*.lxi
+*.g00
+225*.dat
+gamsstmp.txt
+
+# ---- 编辑器 / OS ----
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+
+# ---- Quarto ----
+/.quarto/
+*_files/

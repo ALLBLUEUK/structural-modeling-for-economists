@@ -1,0 +1,78 @@
+---
+title: "<MODEL_NAME> · 分析报告"
+author: "<author>"
+date: today
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    number-sections: true
+  html:
+    toc: true
+    code-fold: false
+execute:
+  echo: false
+  warning: false
+---
+
+# 引言
+
+简述研究问题、模型类型与本报告的目的。详见 `model/01_setup/<MODEL_NAME>/spec.md` 的 §1。
+
+# 模型设定
+
+\input{../output/latex/<MODEL_NAME>/equations.tex}
+
+完整变量分类、参数表、求解方法见 `spec.md` 的 §4–§8。
+
+# 校准
+
+```{r}
+#| label: tbl-calibration
+#| tbl-cap: "校准参数与来源"
+calib <- read.csv("../output/tables/<MODEL_NAME>_calibration.csv")
+knitr::kable(calib, format = "pipe")
+```
+
+校准来源完整记录在 `model/02_calibrate/<MODEL_NAME>/calibration.csv`，由 `calibrate-from-moments` skill 维护。
+
+# 稳态
+
+通过 `validate-steady-state` skill：残差最大值低于容差 1e-8。详见 `quality_reports/<MODEL_NAME>_ss_*.md`。
+
+主要稳态比率：
+
+```{r}
+#| label: tbl-ss
+#| tbl-cap: "稳态比率"
+ss <- jsonlite::fromJSON("../output/checkpoints/<MODEL_NAME>_ss.json")
+knitr::kable(as.data.frame(ss$ratios), format = "pipe")
+```
+
+# 脉冲响应
+
+\input{../output/latex/<MODEL_NAME>/irf_eps_z.tex}
+
+\input{../output/latex/<MODEL_NAME>/irf_eps_z_text.tex}
+
+详细数据：`output/tables/<MODEL_NAME>_irf_eps_z.csv`；形状诊断：`quality_reports/<MODEL_NAME>_irf_diagnostics_*.md`。
+
+# 反事实分析（如适用）
+
+% 由 skills/counterfactual-run 注入：
+% \input{../output/latex/<MODEL_NAME>/cf_<scenario>.tex}
+
+# 复现说明
+
+- 完整流水线入口：`bash scripts/run_pipeline.sh <MODEL_NAME>`
+- 项目级随机种子：`model/_utils/seed.txt`
+- 复现规则详见 `rules/replication-protocol.md`
+- 本报告中的所有数字均经 `verifier` 子 agent 重跑核对（详见 `quality_reports/<MODEL_NAME>_verify_*.md`）
+
+# 引用
+
+如使用本仓库框架，请按 `CITATION.cff` 引用：
+
+> 贾宁远 (2026). Structural Modeling for Economists.
+> https://github.com/ALLBLUEUK/structural-modeling-for-economists

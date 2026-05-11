@@ -1,0 +1,36 @@
+---
+description: Structural modeling and academic-paper composition workflow (strucmod plugin). Reads AGENTS.md + the plugin's skills/agents/rules as canonical source.
+globs: ["**/*.{tex,bib,py,jl,m,mod,gms,csv,md,qmd}"]
+alwaysApply: true
+---
+
+# strucmod — Cursor entry
+
+This project uses the **strucmod** pipeline. The canonical instruction
+source is `AGENTS.md` at the project root, which points at the plugin's
+`skills/`, `agents/`, and `rules/` directories.
+
+## Mandatory reading on every Cursor session
+
+1. `AGENTS.md` (project root)
+2. `<plugin-root>/skills/strucmod/SKILL.md`
+3. `<plugin-root>/rules/orchestrator-protocol.md`
+4. `<plugin-root>/rules/plan-first-modeling.md`
+5. `<plugin-root>/rules/academic-writing-style.md`
+
+`<plugin-root>` is typically `.claude/plugins/strucmod/` (project install) or `~/.claude/plugins/strucmod/` (user install).
+
+## When the user asks Cursor to do anything related to:
+
+- DSGE / CGE / heterogeneous-agent / dynamic programming — invoke the corresponding `setup-*` skill defined in `<plugin-root>/skills/setup-*/SKILL.md`.
+- Solving a model — first run `validate-steady-state`, then `solve-perturbation` / `solve-vfi`.
+- Reporting any numerical result — require `verifier` review before writing to manuscript.
+- Writing a paper section — invoke the corresponding `write-*` skill and submit to `paper-reviewer` for academic-style review.
+
+## Hard constraints
+
+- Never write parameter values without a source recorded in `code/01_calibration.csv`.
+- Never invoke a solver without `model-reviewer` approval.
+- Never modify `code/seed.txt`, `.gitignore`, or `paper/main.tex` casually.
+- All manuscript prose follows `<plugin-root>/rules/academic-writing-style.md` — no file paths, no pipeline talk, no bash commands in body.
+- Use relative paths; code comments default to Chinese; manuscript prose in English.

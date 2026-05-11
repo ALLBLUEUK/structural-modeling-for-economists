@@ -1,0 +1,38 @@
+{
+  "name": "strucmod",
+  "version": "0.2.0",
+  "description": "Agent-assisted structural modeling and dynamic simulation pipeline for economics graduate research (DSGE, CGE, heterogeneous-agent, dynamic programming). Includes academic-paper composition skills that produce publication-grade LaTeX manuscripts, not pipeline reports.",
+  "author": {
+    "name": "Jia Ningyuan",
+    "email": "0337003370@uibe.edu.cn",
+    "url": "https://github.com/ALLBLUEUK/structural-modeling-for-economists"
+  },
+  "homepage": "https://github.com/ALLBLUEUK/structural-modeling-for-economists",
+  "license": "MIT",
+  "keywords": [
+    "economics",
+    "structural-modeling",
+    "DSGE",
+    "CGE",
+    "heterogeneous-agent",
+    "dynamic-programming",
+    "academic-writing",
+    "reproducible-research",
+    "claude-code"
+  ],
+  "skills": "./skills",
+  "agents": "./agents",
+  "hooks": "./hooks",
+  "config": {
+    "default_project_layout": {
+      "paper": "paper/",
+      "code": "code/",
+      "data": "data/",
+      "results": "results/",
+      "slides": "slides/",
+      "references": "references/"
+    },
+    "default_random_seed_file": "code/seed.txt",
+    "default_bibliography": "paper/references.bib"
+  }
+}

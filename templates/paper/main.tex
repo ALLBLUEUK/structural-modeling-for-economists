@@ -1,0 +1,72 @@
+% =============================================================================
+% main.tex —— 论文根文档
+% 由 paper-structure skill 复制到 <project_root>/paper/main.tex
+% =============================================================================
+\documentclass[11pt]{article}
+
+% --- packages ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{xcolor}
+
+% --- layout ---
+\geometry{margin=1in}
+\setlength{\parskip}{0.25\baselineskip}
+\setlength{\parindent}{0pt}
+\graphicspath{{figures/}{../results/figures/}}
+
+% --- hyperref ---
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  citecolor  = blue,
+  urlcolor   = blue
+}
+
+% --- bibliography style ---
+\bibliographystyle{aer}      % AEA style; alt: econometrica, plainnat
+
+% --- metadata ---
+\title{<PAPER_TITLE>}
+\author{<AUTHOR_NAME>\thanks{<AFFILIATION>; <EMAIL>. <ACK>.}}
+\date{\today}
+
+% =============================================================================
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent <ABSTRACT_TEXT>
+\medskip
+
+\noindent \textbf{Keywords:} <KEYWORDS>.
+
+\noindent \textbf{JEL classification:} <JEL_CODES>.
+\end{abstract}
+
+\clearpage
+
+\input{sections/01_introduction.tex}
+\input{sections/02_model.tex}
+\input{sections/03_calibration.tex}
+\input{sections/04_solution.tex}
+\input{sections/05_results.tex}
+\input{sections/06_robustness.tex}
+\input{sections/07_conclusion.tex}
+
+\bibliography{references}
+
+\appendix
+\input{appendix/A_proofs.tex}
+\input{appendix/B_additional_results.tex}
+
+\end{document}
