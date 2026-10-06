@@ -56,7 +56,7 @@ case_ha_aiyagari_borrowing/
 
 ## 五、如何复现
 
-在任一案例目录下运行 `bash run_all.sh`（需 Python 3.10+、numpy、scipy、matplotlib）；或用插件脚本自动比对：
+在任一案例目录下运行 `bash run_all.sh`（需 Python 3.10+、numpy、scipy、matplotlib）；或用插件脚本自动比对。以下路径适用于结项材料目录；在 GitHub 仓库的 examples 目录中，把 `../../strucmod-v0.3/scripts` 换成 `../../scripts`：
 
 ```bash
 python ../../strucmod-v0.3/scripts/replicate_compare.py --cmd "bash run_all.sh" --compare <产物路径> ...
