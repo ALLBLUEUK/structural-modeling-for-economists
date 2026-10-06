@@ -1,6 +1,6 @@
 ---
 name: setup-ha-bewley
-description: 写或扩展异质主体（Aiyagari / Bewley / Krusell-Smith）模型的设定与 Julia 脚手架。当用户说"建一个异质主体模型"、"Aiyagari"、"Bewley"、"sequence-space"、"不完全市场"时调用。
+description: 写或扩展异质主体（Aiyagari / Bewley / Krusell-Smith）模型的设定，并提供可直接运行的 Python 稳态求解模板（v0.3）与 Julia 脚手架。当用户说"建一个异质主体模型"、"Aiyagari"、"Bewley"、"sequence-space"、"不完全市场"时调用。
 type: setup
 ---
 
@@ -53,3 +53,16 @@ type: setup
 | 必备前置未满足 | 报错并指出缺什么；不绕过 |
 | 上游产物 stale | 重跑上游 skill；不"凭旧的 checkpoint 继续" |
 | 用户口径模糊 | 调用 `interview-me` skill 反向访谈 |
+
+## v0.3 新增：Python 稳态求解路径（推荐研究生先用）
+
+`templates/master-ha-template.py` 是可直接运行的 Aiyagari / Bewley 稳态求解器，无需 Julia 环境。
+
+1. spec 通过 `model-reviewer` 与 `math-reviewer` 后，复制模板到 `model/03_solve/<model>/solve.py`，把 `MODEL_NAME` 改为模型名。
+2. 在 `model/02_calibrate/<model>/calibration.csv` 中至少给出：`beta, mu, alpha, delta, rho, sigma, n_z, n_a, a_max, b`；可选 `use_rouwenhorst`（默认 1）、`m`（Tauchen 宽度）、`tol_ss`（默认 1e-6，建议 1e-8）。
+3. 运行：`python model/03_solve/<model>/solve.py --scenario baseline`；比较静态：`--scenario b2 --set b=2`。拼错的参数名会直接报错。
+4. 读检查点 `output/checkpoints/<model>_<scenario>_ss.json`：`validated` 为 true 才能进入表格与报告。它同时要求出清与资源约束残差、分布与 EGM 收敛、网格上端质量 < 1e-8、唯一性扫描单次穿越、离散化质量（方差相对误差 < 5%、自相关误差 < 0.01）。
+5. 必做的极限检验：取 `--set sigma=0.001 --set r_hi_eps=1e-8`，利率应回到 1/β − 1、储蓄率应回到完全市场基准。
+6. 求解后调用 `numerics-reviewer`；对外报告前用 `scripts/replicate_compare.py` 与 `scripts/check_claims.py`（见 `replicate`）。
+
+验收案例：`结项/工作流验收/case_ha_aiyagari_borrowing/`（借贷限额的比较静态）。

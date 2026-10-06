@@ -1,0 +1,6 @@
+2026-10-04 01:49:00,666 [INFO] 参数：{'a_max': 100.0, 'alpha': 0.36, 'b': 8.0, 'beta': 0.96, 'delta': 0.08, 'm': 3.0, 'mu': 3.0, 'n_a': 400, 'n_z': 7, 'rho': 0.9, 'sigma': 0.2, 'tol_ss': 1e-08, 'use_rouwenhorst': 1.0}
+2026-10-04 01:49:00,666 [INFO] 收入离散化：{'method': 'rouwenhorst', 'var_logz': 0.039999999999999994, 'target_var': 0.04000000000000001, 'autocorr': 0.9, 'target_rho': 0.9, 'var_rel_error': 3.3306690738754696e-16, 'autocorr_abs_error': 0.0}
+2026-10-04 01:49:02,604 [INFO] 均衡：r=0.038018  K/Y=3.0504  s=0.2440  受约束比例=0.0026
+2026-10-04 01:49:02,608 [INFO] 残差：{'capital_market_rel': 4.446969788525916e-14, 'resource_constraint_rel': 1.4110371280652653e-14, 'distribution_mass_minus_one': 2.220446049250313e-16}
+2026-10-04 01:49:02,608 [INFO] 诊断：EGM 539 次，分布 1 次，上端质量 2.25e-12，Euler 误差 log10 均值 -7.35，唯一性扫描穿越 1 次
+2026-10-04 01:49:02,608 [INFO] validated = True

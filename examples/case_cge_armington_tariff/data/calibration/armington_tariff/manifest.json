@@ -1,0 +1,19 @@
+{
+  "model": "armington_tariff",
+  "registered": "2026-10-04",
+  "files": {
+    "trade_flows.csv": {
+      "description": "基期双边贸易流（出厂价，3 地区 × 2 部门），单位：示意货币单位",
+      "nature": "示意数据（illustrative），非真实统计；量级大致参考公开统计的数量级，仅用于机制示范",
+      "regions": {"A": "大型制造业出口经济体（中性标签）", "B": "发达经济体（中性标签）", "R": "世界其他地区"},
+      "sectors": {"MAN": "制造业", "OTH": "其他部门"},
+      "has_trade_deficits": true
+    },
+    "trade_flows_purged.csv": {
+      "description": "按 Dekle-Eaton-Kortum (2008) 剔除贸易赤字后的基期（由 solve.py --purge 生成）",
+      "generated_by": "model/03_solve/armington_tariff/solve.py --purge",
+      "nature": "由示意数据派生"
+    }
+  },
+  "disclaimer": "示意数据，结论仅为机制示范，不得解读为对任何真实国家或真实贸易摩擦的定量评估"
+}

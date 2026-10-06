@@ -1,6 +1,6 @@
 {
   "name": "strucmod",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Agent-assisted structural modeling and dynamic simulation pipeline for economics graduate research (DSGE, CGE, heterogeneous-agent, dynamic programming). Includes academic-paper composition skills that produce publication-grade LaTeX manuscripts, not pipeline reports.",
   "author": {
     "name": "Jia Ningyuan",

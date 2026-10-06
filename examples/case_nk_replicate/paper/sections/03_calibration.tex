@@ -1,0 +1,58 @@
+\section{Calibration}
+\label{sec:calibration}
+
+\subsection{Parameter Values}
+\label{sec:calibration_params}
+
+The model is calibrated at quarterly frequency following
+\citet{Gali2008}, Chapter~3. Table~\ref{tab:calibration} lists the
+deep parameters together with their sources.
+
+\begin{table}[t]
+  \centering
+  \caption{Calibrated parameters (quarterly).}
+  \label{tab:calibration}
+  \begin{tabular}{lcll}
+    \toprule
+    Parameter & Value & Description & Source \\
+    \midrule
+    $\beta$      & $0.99$   & discount factor                 & \citet{Gali2008}, Table~3.1 \\
+    $\sigma$     & $1.00$   & inverse intertemporal elasticity & \citet{Gali2008}, Ch.~3 \\
+    $\varphi$    & $1.00$   & Frisch labour disutility curvature & \citet{Gali2008}, Ch.~3 \\
+    $\theta$     & $0.75$   & Calvo price stickiness          & \citet{Gali2008}, Ch.~3 \\
+    $\phi_{\pi}$ & $1.50$   & Taylor rule inflation reaction  & \citet{Taylor1993} \\
+    $\phi_{y}$   & $0.125$  & Taylor rule output reaction     & \citet{Gali2008}, Ch.~3 \\
+    $\rho_{a}$   & $0.90$   & TFP shock persistence           & \citet{Gali2008}, Ch.~3 \\
+    $\rho_{b}$   & $0.50$   & preference shock persistence    & \citet{Gali2008}, Ch.~3 \\
+    $\rho_{m}$   & $0.50$   & monetary shock persistence      & \citet{Gali2008}, Ch.~3 \\
+    $\sigma_{m}$ & $0.25\%$ & monetary innovation std.        & \citet{Gali2008}, Ch.~3 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The discount factor and shock persistences follow the canonical
+calibration in \citet{Gali2008}. The intertemporal elasticity is set to
+unity, the textbook log-utility benchmark. The Frisch labour-supply
+elasticity is also set to unity, an intermediate value consistent with
+the micro estimates surveyed by \citet{ChettyEtAl2011}. The Calvo
+parameter $\theta=0.75$ implies that the expected duration of a fixed
+price is four quarters, matching the median duration documented by
+\citet{NakamuraSteinsson2008} for the U.S.\ Consumer Price Index. The
+Taylor rule coefficients follow \citet{Taylor1993} for inflation and
+\citet{Gali2008} for output.
+
+\subsection{Implied Composite Coefficient}
+\label{sec:calibration_kappa}
+
+The deep parameters imply a Phillips-curve slope of
+\begin{equation}
+  \kappa
+  =\frac{(1-\theta)(1-\beta\theta)}{\theta}\,(\sigma+\varphi)
+  =\frac{(0.25)(0.2575)}{0.75}\,(2.00)
+  \approx 0.1717,
+  \label{eq:kappa}
+\end{equation}
+which is the value used throughout the rest of the paper. Steady-state
+analysis is trivial in log-deviation form: every variable equals zero by
+construction, and substituting the analytical steady state into the
+equilibrium conditions yields residuals identically equal to zero.

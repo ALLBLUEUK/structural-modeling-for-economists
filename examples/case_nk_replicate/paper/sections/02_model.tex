@@ -1,0 +1,109 @@
+\section{Model}
+\label{sec:model}
+
+\subsection{Environment}
+\label{sec:model_env}
+
+Time is discrete and indexed by $t=0,1,2,\ldots$. The economy is
+populated by a representative household supplying differentiated labour,
+a continuum of monopolistically competitive intermediate-goods producers,
+a perfectly competitive final-goods producer, and a central bank that
+sets the nominal interest rate. There are three sources of aggregate
+uncertainty: a technology shock, a preference shock, and an exogenous
+disturbance to the policy rule. Information is symmetric and households
+and firms form rational expectations conditional on the time-$t$
+information set.
+
+\subsection{Households}
+\label{sec:model_hh}
+
+The representative household maximises expected lifetime utility,
+\begin{equation}
+  \mathbb{E}_{0}\sum_{t=0}^{\infty}\beta^{t}\,e^{\varepsilon_{t}^{b}}
+  \left\{\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}\right\},
+  \label{eq:utility}
+\end{equation}
+subject to the period budget constraint
+\begin{equation}
+  P_{t}\,C_{t}+B_{t}=W_{t}\,N_{t}+R_{t-1}\,B_{t-1}+T_{t},
+  \label{eq:budget}
+\end{equation}
+where $C_{t}$ is consumption, $N_{t}$ is labour supplied, $B_{t}$ is
+nominal bond holdings, $W_{t}$ is the nominal wage, $R_{t-1}$ is the
+gross nominal return on bonds, and $T_{t}$ is a lump-sum transfer. The
+preference disturbance $\varepsilon_{t}^{b}$ generates a demand shock
+through the household's intertemporal marginal rate of substitution.
+The household's first-order conditions yield a labour-supply condition
+relating the real wage to the marginal rate of substitution and an
+intertemporal Euler equation for consumption.
+
+\subsection{Firms}
+\label{sec:model_firms}
+
+A continuum of intermediate-goods firms produces differentiated varieties
+indexed by $i\in[0,1]$ using the linear technology
+\begin{equation}
+  Y_{t}(i)=A_{t}\,N_{t}(i),\qquad A_{t}=\exp\!\left(\varepsilon_{t}^{a}\right),
+  \label{eq:production}
+\end{equation}
+where $\varepsilon_{t}^{a}$ is an aggregate productivity disturbance.
+Each firm sets its nominal price subject to Calvo-type staggering: in
+every period, the firm is permitted to reset its price with probability
+$1-\theta$; otherwise the price is kept unchanged. Firms that reset
+choose the price that maximises expected discounted profits taking the
+aggregate price level and future marginal costs as given. A perfectly
+competitive final-goods sector combines the varieties via the
+Dixit--Stiglitz aggregator
+\begin{equation}
+  Y_{t}=\left[\int_{0}^{1}Y_{t}(i)^{(\varepsilon_{p}-1)/\varepsilon_{p}}\,di\right]^{\varepsilon_{p}/(\varepsilon_{p}-1)},
+  \label{eq:final-good}
+\end{equation}
+where $\varepsilon_{p}=1+1/\lambda_{p}$ is the elasticity of substitution
+and $\lambda_{p}$ is the steady-state gross price markup.
+
+\subsection{Central Bank}
+\label{sec:model_cb}
+
+The central bank sets the nominal interest rate according to a Taylor
+rule with output reaction:
+\begin{equation}
+  r_{t}=\phi_{\pi}\,\pi_{t}+\phi_{y}\,y_{t}+\varepsilon_{t}^{m},
+  \label{eq:taylor}
+\end{equation}
+where $r_{t}=\log(R_{t})-\log(R^{\ast})$ denotes the log-deviation of
+the gross nominal rate from its zero-inflation steady state, $\pi_{t}$
+denotes inflation, $y_{t}$ denotes the log-deviation of output, and
+$\varepsilon_{t}^{m}$ is an exogenous monetary policy innovation. The
+parameters $\phi_{\pi}>1$ and $\phi_{y}\ge 0$ ensure determinacy via the
+Taylor principle.
+
+\subsection{Equilibrium and Log-Linearised System}
+\label{sec:model_eq}
+
+Substituting the household's Euler condition and goods-market clearing
+($C_{t}=Y_{t}$) yields the dynamic IS curve; combining the firms'
+first-order condition with Calvo aggregation yields the New Keynesian
+Phillips curve. The complete log-linearised system around the
+zero-inflation deterministic steady state is
+
+\begin{align}
+  y_{t}    &= \mathbb{E}_{t} y_{t+1} - \frac{1}{\sigma}\bigl(r_{t} - \mathbb{E}_{t}\pi_{t+1}\bigr) + \varepsilon_{t}^{b}
+              \label{eq:nk-is} \\
+  \pi_{t}  &= \beta\, \mathbb{E}_{t}\pi_{t+1} + \kappa\, y_{t} - \varepsilon_{t}^{a}
+              \label{eq:nk-nkpc} \\
+  r_{t}    &= \phi_{\pi}\, \pi_{t} + \phi_{y}\, y_{t} + \varepsilon_{t}^{m}
+              \label{eq:nk-taylor} \\
+  \varepsilon_{t}^{a} &= \rho_{a}\, \varepsilon_{t-1}^{a} + \eta_{t}^{a}
+              \label{eq:nk-ar-a} \\
+  \varepsilon_{t}^{b} &= \rho_{b}\, \varepsilon_{t-1}^{b} + \eta_{t}^{b}
+              \label{eq:nk-ar-b} \\
+  \varepsilon_{t}^{m} &= \rho_{m}\, \varepsilon_{t-1}^{m} + \eta_{t}^{m}
+              \label{eq:nk-ar-m}
+\end{align}
+where $\kappa\equiv\bigl[(1-\theta)(1-\beta\theta)/\theta\bigr]\,(\sigma+\varphi)$
+is the slope of the Phillips curve. The system contains three endogenous
+variables ($y_{t},\pi_{t},r_{t}$) and three exogenous AR(1) shock
+processes ($\varepsilon_{t}^{a},\varepsilon_{t}^{b},\varepsilon_{t}^{m}$);
+the six equations match the six unknowns. Capital is absent under the
+linear-in-labour technology; consumption equals output by market
+clearing.

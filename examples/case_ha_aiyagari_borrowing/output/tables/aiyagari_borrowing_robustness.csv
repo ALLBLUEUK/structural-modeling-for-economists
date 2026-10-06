@@ -1,0 +1,7 @@
+scenario,method,n_z,b,sigma,r_pct,saving_rate_pct,var_rel_error,validated
+rob_nz15_b0,rouwenhorst,15,0.000000,0.200000,3.577963,24.874842,0.000000,True
+rob_nz15_b2,rouwenhorst,15,2.000000,0.200000,3.676229,24.665498,0.000000,True
+rob_nz15_b8,rouwenhorst,15,8.000000,0.200000,3.800368,24.406018,0.000000,True
+cmp_tauchen_b0,tauchen,7,0.000000,0.200000,3.371430,25.326630,0.370747,False
+cmp_tauchen_b8,tauchen,7,8.000000,0.200000,3.667792,24.683334,0.370747,False
+limit_sigma0,rouwenhorst,7,0.000000,0.001000,4.166597,23.671368,0.000000,True

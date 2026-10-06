@@ -92,7 +92,8 @@ def main() -> int:
 
     args.report_dir.mkdir(parents=True, exist_ok=True)
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    report = args.report_dir / f"{model}_walras_{ts}.md"
+    # v0.3 修订：文件名加入 checkpoint 名，避免同一秒内多个情形的报告互相覆盖（验收案例数值评审中发现）
+    report = args.report_dir / f"{args.checkpoint.stem}_walras_{ts}.md"
     lines = [
         f"# Walras 律 + SAM 平衡报告 · {model} · {ts}",
         "",

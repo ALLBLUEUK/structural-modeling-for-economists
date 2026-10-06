@@ -1,0 +1,73 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Impulse Responses to a Contractionary Monetary Shock}
+\label{sec:results_irf}
+
+Figure~\ref{fig:irf} reports the dynamic response of output, inflation,
+and interest rates to a 25 basis-point contractionary innovation in the
+monetary policy rule, $\varepsilon_{t}^{m}=0.0025$ in quarterly units.
+The shock follows an AR(1) process with persistence $\rho_{m}=0.50$, so
+its half-life is one quarter; the propagation in the macro aggregates,
+however, persists somewhat longer because of the model's forward-looking
+dynamics. Three quantitative features merit discussion.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.98\textwidth]{nk_irf_eps_m.pdf}
+  \caption{Impulse responses to a positive 25-basis-point monetary
+    policy innovation $\varepsilon_{t}^{m}$ with AR(1) persistence
+    $\rho_{m}=0.50$. Output is expressed as the percentage deviation
+    from steady state; inflation and interest rates are expressed as
+    percentage-point deviations on an annualised basis.}
+  \label{fig:irf}
+\end{figure}
+
+\paragraph{Output contracts on impact and recovers smoothly.}
+Output falls by $0.259\%$ on impact and gradually returns to its steady
+state, becoming indistinguishable from zero by roughly the tenth
+quarter. The decline reflects the textbook New Keynesian intertemporal
+substitution mechanism: the contractionary innovation raises the real
+interest rate ex ante, encouraging households to defer consumption.
+Because $C_{t}=Y_{t}$ by goods-market clearing, lower consumption
+translates one-for-one into lower output. The magnitude of the impact
+response is governed by the elasticity $1/\sigma$ in the IS
+curve~\eqref{eq:nk-is}; with the textbook unit value of $\sigma$, an
+$x$-basis-point increase in the real rate maps approximately into an
+$x$-basis-point reduction in output, modulated by the Taylor-rule
+feedback through inflation.
+
+\paragraph{Inflation falls more than output in annualised terms.}
+Inflation falls by $0.352$ percentage points on impact when expressed
+on an annualised basis, and recovers along a similar timescale to
+output. The Phillips-curve slope $\kappa\approx 0.172$ implies that a
+$0.259$-percent decline in output translates into a quarterly inflation
+decline of approximately $\kappa\,y_{t}\approx 0.044$ percent. The
+annualised value of $0.178$ percentage points (i.e., $4\,\kappa\,y_{t}$)
+is mechanically smaller than the full impact response, however, because
+the forward-looking term in the Phillips curve also contracts:
+households and firms expect future inflation to be below the steady
+state, and this expected disinflation is itself a contemporaneous
+Phillips-curve force pulling current inflation down further. The total annualised impact response
+of $0.352$ percentage points reflects the sum of these two effects.
+
+\paragraph{The real interest rate rises by more than the nominal rate.}
+The annualised nominal rate rises by $0.342$ percentage points, while
+the annualised \textit{real} rate (defined as $r_{t}-\mathbb{E}_{t}
+\pi_{t+1}$) rises by $0.518$ percentage points. The real rate exceeds
+the nominal rate response because expected inflation is negative
+following the shock; subtracting a negative number adds to the
+ex-ante real rate. This is the proximate channel through which monetary
+policy contracts aggregate demand, and the asymmetric response of
+real versus nominal rates is a defining feature of the New Keynesian
+transmission mechanism (cf.\ \citealp{Gali2008}, Section~3.4).
+
+\paragraph{Comovement and ranking.}
+All three series respond in the directions predicted by the canonical
+model: output and inflation fall together, the policy rate rises, and
+the real rate rises by even more. The ordering of volatilities--with
+the annualised real rate response exceeding the annualised nominal
+rate response, which in turn exceeds the annualised inflation
+response--is consistent with the empirical patterns documented by
+\citet{ChristianoEichenbaumEvans2005} and replicates the qualitative
+ranking shown in \citet[][Figure~3.1]{Gali2008}.

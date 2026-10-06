@@ -1,0 +1,6 @@
+zero-shock perturbed start dev 3.3306690738754696e-15 nfev 24
+zero-shock perturbed start dev 3.3306690738754696e-15 nfev 24
+zero-shock perturbed start dev 3.1086244689504383e-15 nfev 16
+trade_balance after S1 using purged D: 1.0186340659856796e-10
+S1 tariff nonzero idx [[1 0 0]] regions ['A', 'B', 'R']
+tol1e-8 vs 1e-13 dw 6.217248937900877e-15

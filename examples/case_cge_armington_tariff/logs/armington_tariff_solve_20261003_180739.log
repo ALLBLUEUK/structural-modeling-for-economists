@@ -1,0 +1,16 @@
+2026-10-04 02:07:39,442 [INFO] raw base: Y=[21000.0, 24180.0, 58200.0]  D=[-1120.0, 1320.0, -200.0]  sum(D)=0.00e+00
+2026-10-04 02:07:39,443 [INFO] purged base: Y=[22002.979, 22904.38, 58472.641]  max|D|=7.28e-12
+2026-10-04 02:07:39,453 [INFO] check purged_max_abs_deficit_rel         9.853e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check zero_shock_what_dev                3.331e-15  tol 1e-12  PASS
+2026-10-04 02:07:39,453 [INFO] check zero_shock_What_dev                4.885e-15  tol 1e-12  PASS
+2026-10-04 02:07:39,453 [INFO] check walras_max_clearing_rel            3.519e-17  tol 1e-10  PASS
+2026-10-04 02:07:39,453 [INFO] check numeraire_neutrality_What_diff     2.220e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check levels_vs_hat_wage_diff            2.220e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check levels_vs_hat_welfare_diff         2.220e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check composition_welfare_diff           3.331e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check sector_employment_adding_up        1.110e-16  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check decomposition_residual             4.402e-15  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] check two_solver_what_diff               1.037e-13  tol 1e-09  PASS
+2026-10-04 02:07:39,453 [INFO] info (not counted): {'identity_world_deficit_sum': 7.275957614183426e-12, 'identity_income_equals_sales': 0.0, 'identity_expenditure': 0.0, 'iterate_solver_iterations': 40, 'acr_formula_consistency': 1.1102230246251565e-16}
+2026-10-04 02:07:39,514 [INFO] [S1] w_hat=[1.002945, 0.996472, 1.000274]  W_hat=[1.000198, 0.999598, 1.000029]  validated=True
+2026-10-04 02:07:39,517 [INFO] [S2] w_hat=[0.998087, 1.00083, 1.000395]  W_hat=[0.999589, 0.999858, 1.000071]  validated=True

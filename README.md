@@ -13,6 +13,18 @@ DSGE, CGE, heterogeneous-agent, dynamic-programming — model spec → calibrati
 
 ---
 
+## What's new in v0.3.0 (2026-10-04)
+
+- **Heterogeneous-agent solver template** `templates/master-ha-template.py` — runnable Aiyagari/Bewley steady-state solver in plain Python (EGM, Young lottery with direct linear solve for the stationary distribution, Rouwenhorst/Tauchen, Brent GE with a φ(r)-dependent grid, uniqueness scan). A result is `validated` only if market clearing, the resource constraint, distribution and EGM convergence, top-of-grid mass and discretisation quality all pass.
+- **GAMS-free CGE solver template** `templates/master-cge-template.py` — multi-region multi-sector Armington model with Dekle–Eaton–Kortum exact hat algebra, tariff revenue, deficit purge and welfare decomposition; 11 built-in checks including an independent levels-form solver cross-check. Output is compatible with `scripts/check_walras.py`.
+- **`scripts/replicate_compare.py`** — copies the project to a temp dir, deletes the artifacts, reruns, and diffs every number.
+- **`scripts/check_claims.py`** — checks every number quoted in a manuscript against its data source (`claims.csv`). On its first run it found two numeric errors in the v0.2 demo paper.
+- Fixes to `check_steady_state.py` and `check_walras.py`. See [CHANGELOG.md](CHANGELOG.md).
+
+Each new module was accepted by running a full case through the workflow (spec → model/math review → calibrate → solve → numerics/code review → counterfactuals → replication → report → claims check → verifier with an independent implementation → paper review).
+
+---
+
 ## What's inside
 
 - **30+ skills** — `setup-dsge`, `setup-cge-gtap`, `setup-ha-bewley`, `calibrate-from-moments`, `solve-perturbation`, `solve-vfi`, `simulate-irf`, `counterfactual-run`, plus 8 paper-composition skills (`paper-structure`, `write-introduction`, `write-model-section`, `write-calibration-section`, `write-solution-section`, `write-results-section`, `write-conclusion`, `manage-bibliography`, `render-paper`).

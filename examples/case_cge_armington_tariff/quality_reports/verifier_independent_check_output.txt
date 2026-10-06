@@ -1,0 +1,39 @@
+raw deficits D_j = E_j - Y_j: [-1120.  1320.  -200.]
+purged baseline max|E-Y|/sumY: 3.519035410226072e-17
+purge vs project trade_flows_purged.csv: max abs diff = 4.729372449219227e-11  max rel diff = 3.5778630363139016e-13
+
+S1: w_hat = [1.00294462 0.99647223 1.00027382]
+S1: What = [1.0001983  0.99959783 1.00002876]  welfare_pct = [ 0.01982951 -0.0402168   0.00287587]
+S1: max|clearing resid|/sumY (all 3 eqs) = 0.000e+00
+S1: A MAN imports from B, value change % = -35.832375957597506
+
+S2: w_hat = [0.99808675 1.00082977 1.00039492]
+S2: What = [0.9995886  0.99985811 1.00007071]  welfare_pct = [-0.04114038 -0.01418918  0.00707051]
+S2: max|clearing resid|/sumY (all 3 eqs) = 7.038e-17
+S2: A MAN imports from B, value change % = -38.25271763761382
+
+=== Comparison with project outputs ===
+S1 A: welfare_pct mine=0.0198295052 ckpt=0.0198295052 |dWhat|=2.22e-16 |dwage|=0.00e+00 (csv 6dp diff 4.9e-07)
+S1 B: welfare_pct mine=-0.0402167964 ckpt=-0.0402167964 |dWhat|=2.22e-16 |dwage|=1.11e-16 (csv 6dp diff 2.0e-07)
+S2 A: welfare_pct mine=-0.0411403839 ckpt=-0.0411403839 |dWhat|=3.33e-16 |dwage|=6.66e-16 (csv 6dp diff 3.8e-07)
+S2 B: welfare_pct mine=-0.0141891775 ckpt=-0.0141891775 |dWhat|=0.00e+00 |dwage|=0.00e+00 (csv 6dp diff 1.8e-07)
+A MAN imports from B: mine=-35.8323759576 proj=-35.8323759576 diff(pct pts)=1.39e-12
+A MAN imports from R: diff=2.31e-12; A own MAN sales: diff=5.33e-13
+relative wage B/A: mine=0.993546616327 diff=4.11e-15 -> decline 0.6453%
+P3 A S2-S1 pp: -0.060970 (diff 1.11e-14); B: 0.026028 (diff 2.22e-14)
+MAX |diff| (What, w_hat, flow-change ratios, relative wage): 2.309e-14  (threshold 1e-8)
+
+=== Report-derived numbers ===
+S1 A ln decomposition (%): wage=0.2940  tariff rev=0.0562  price index(residual)=-0.3304  sum=0.0198
+Optimal tariff grid argmax = 0.11, A welfare = 0.019857%; at 10%: 0.019830%
+eps_MAN sweep (S1A,S1B,S2A,S2B %), re-purged from raw:
+  eps=2: 0.022625, -0.034807, -0.040554, -0.002482
+  eps=3: 0.021688, -0.038333, -0.040788, -0.009017
+  eps=4: 0.019830, -0.040217, -0.041140, -0.014189
+  eps=6: 0.015171, -0.041378, -0.042009, -0.021702
+  eps=8: 0.010442, -0.040829, -0.042747, -0.026700
+  max |diff| vs project 6dp table: 4.99e-07
+fine sweep eps 2..12 step .25 (41 pts): S1 A welfare min=0.002470 max=0.022625, any<=0: False; S2 A welfare max=-0.040554, any>=0: False
+S1 A at eps=12: 0.002470%
+
+RESULT: PASS

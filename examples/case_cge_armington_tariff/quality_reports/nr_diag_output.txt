@@ -1,0 +1,34 @@
+raw D [-1120.  1320.  -200.] alpha rows sum [1. 1. 1.]
+repurge vs csv max abs diff 4.729372449219227e-11
+purged D after csv reload [-9.822543e-11  3.637979e-12  1.018634e-10] Y [22002.978869 22904.379804 58472.641327] sumD 7.275957614183426e-12
+purged min flow 30.2657513244 trade balance purged [ 9.822543e-11 -3.637979e-12 -1.018634e-10]
+purge idempotence diff 1.0913936421275139e-10
+purge what [1.047761 0.947245 1.004685]
+raw zero shock w dev 0.0
+Jac full
+ [[ 0.190561 -0.025079 -0.166086]
+ [-0.024071  0.167976 -0.143202]
+ [-0.16649  -0.142898  0.309289]] 
+sv [4.655016e-01 2.023254e-01 2.359853e-11]
+cond reduced Jac 3.3005418885976425
+sum resid off-eq (should be 0): 9.71445146547012e-17 resid [-0.058614  0.135754 -0.07714 ]
+sum resid off-eq (should be 0): -4.163336342344337e-17 resid [ 0.098478  0.018024 -0.116502]
+sum resid off-eq (should be 0): 5.551115123125783e-17 resid [ 0.024714  0.119985 -0.144699]
+multistart converged 30 /30 max dev 6.661338147750939e-16
+ACR diff at NON-equilibrium w [1. 1. 1.] 2.220446049250313e-16 clear resid [ 0.011136 -0.001543 -0.009593]
+ACR diff at NON-equilibrium w [1.3 0.7 1.1] 2.220446049250313e-16 clear resid [ 0.082987 -0.138504  0.055517]
+ACR eq What [1.00554 0.99855 1.00187] w [0.961045 1.013125 1.009518]
+w ratio invariance 4.440892098500626e-16 scale 0.9951319475492008
+What diff 2.220446049250313e-16
+RAW (D!=0) What diff (expected nonzero) 0.00047120361340691197
+S2 two solver 8.104628079763643e-14 40
+eps 2 w [1.003428 0.99592  1.000308]
+eps 8 w [1.002413 0.997097 1.000229]
+Traceback (most recent call last):
+  File "examples/case_cge_armington_tariff\quality_reports\nr_diag.py", line 72, in <module>
+    print("sector emp checks S1", json.load(open('output/checkpoints/armington_tariff_S1.json'))['diagnostics'])
+                                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ~~~~~~~^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x83 in position 2919: illegal multibyte sequence

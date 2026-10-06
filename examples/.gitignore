@@ -1,0 +1,5 @@
+# 验收案例保留运行日志、检查点与数据，作为可复现证据
+!*.log
+!**/logs/*
+!**/output/checkpoints/*
+!**/data/calibration/**

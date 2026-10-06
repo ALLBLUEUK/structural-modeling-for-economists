@@ -1,0 +1,3 @@
+parameter,value,unit,source_type,source,identification,bounds_lower,bounds_upper,notes
+eps_MAN,4,unitless,A,Simonovska and Waugh (2014),literature,2,8,trade elasticity (= sigma - 1 under Armington); robustness sweep 2 3 4 6 8
+eps_OTH,4,unitless,A,Simonovska and Waugh (2014),literature,2,8,trade elasticity; same as MAN in baseline

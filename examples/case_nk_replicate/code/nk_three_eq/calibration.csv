@@ -1,0 +1,13 @@
+parameter,value,unit,source_type,source,identification,bounds_lower,bounds_upper,notes
+beta,0.99,quarterly,A,Gali (2008) Ch.3 Table 3.1,literature,0.95,0.999,quarterly discount factor (~4% annual real rate)
+sigma,1.0,unitless,A,Gali (2008) Ch.3,literature,0.5,4.0,inverse intertemporal elasticity of consumption
+varphi,1.0,unitless,A,Gali (2008) Ch.3,literature,0.5,4.0,Frisch labour disutility curvature
+theta,0.75,probability,A,Gali (2008) Ch.3,literature,0.5,0.9,Calvo prices (prob of no reset; implies 4-quarter mean duration)
+phi_pi,1.5,unitless,A,Taylor (1993); Gali (2008),literature,1.1,3.0,Taylor rule inflation reaction
+phi_y,0.125,unitless,A,Gali (2008) Ch.3 (= 0.5 / 4),literature,0.0,0.5,Taylor rule output reaction
+rho_a,0.9,persistence,A,Gali (2008) Ch.3,literature,0.0,0.99,TFP shock persistence
+rho_b,0.5,persistence,A,Gali (2008) Ch.3,literature,0.0,0.99,preference shock persistence
+rho_m,0.5,persistence,A,Gali (2008) Ch.3,literature,0.0,0.99,monetary policy shock persistence
+sigma_a,0.7,percent,A,Gali (2008) Ch.3,literature,0.1,2.0,TFP innovation std
+sigma_b,0.5,percent,A,Gali (2008) Ch.3,literature,0.1,2.0,preference innovation std
+sigma_m,0.25,percent,A,Gali (2008) Ch.3,literature,0.05,1.0,monetary innovation std (25 bp per quarter ~ 1 percentage point annualised)

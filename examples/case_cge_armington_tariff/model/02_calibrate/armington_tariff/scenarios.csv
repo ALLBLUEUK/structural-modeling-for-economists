@@ -1,0 +1,4 @@
+scenario,exporter,importer,sector,tariff_new
+S1,B,A,MAN,0.10
+S2,B,A,MAN,0.10
+S2,A,B,MAN,0.10

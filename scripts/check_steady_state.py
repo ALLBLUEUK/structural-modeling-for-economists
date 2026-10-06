@@ -90,6 +90,12 @@ def main() -> int:
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"[check_steady_state] 报告写入：{report_path}")
 
+    # v0.3 修订：求解器自身已判为不通过（如分布未收敛、网格上端有质量）时，
+    # 不得仅凭残差把 validated 改写为 True（验收案例代码评审中发现）。
+    if n_fail == 0 and data.get("validated") is False:
+        print("[check_steady_state] 残差通过，但求解器已标记 validated=False，维持不通过")
+        return 2
+
     if n_fail == 0:
         # 在 checkpoint 中标记 validated
         data["validated"] = True

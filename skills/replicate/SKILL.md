@@ -98,3 +98,17 @@ type: validator
 4. 第三方包版本？
 
 把上述都对齐之后还差异，才进入代码层 diff。
+
+## v0.3 新增：两个自动化脚本
+
+**一键复现比对** `scripts/replicate_compare.py`：复制项目到临时目录，删除待比对产物后按给定命令重跑，再逐项比较 CSV 单元格与 JSON 数值叶子，写出 `quality_reports/<model>_replicate_<ts>.md`。原项目不被修改。
+
+```bash
+python scripts/replicate_compare.py --cmd "bash run_all.sh"     --compare output/tables/<model>_xxx.csv --compare output/checkpoints/<model>_ss.json --tol 1e-6
+```
+
+**文稿数字核对** `scripts/check_claims.py`：在项目根目录写 `claims.csv`，每行登记文稿中的一个数字及其数据源位置（CSV 行列或 JSON 路径、换算系数、是否取绝对值）。脚本检查该数字是否出现在文稿中、按文稿精度复算是否一致，写出 `quality_reports/<model>_claims_<ts>.md`。有不一致时退出码为 2，禁止对外发布。
+
+建议：每个项目根目录放一个 `run_all.sh` 作为复现入口；论文定稿前对摘要、正文、结论中的每个数字都登记 claims。差值类数字（如“上升 0.22 个百分点”）无法直接定位时，在报告中由 verifier 人工核对并注明。
+
+验收：对 v0.2 示范论文的核对发现两处数字错误（见 `结项/工作流验收/case_nk_replicate/`）。

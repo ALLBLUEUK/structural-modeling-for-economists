@@ -1,0 +1,29 @@
+{
+  "model": "nk_three_eq",
+  "steady_state": {
+    "y": 0.0,
+    "pi": 0.0,
+    "r": 0.0
+  },
+  "params": {
+    "beta": 0.99,
+    "sigma": 1.0,
+    "varphi": 1.0,
+    "theta": 0.75,
+    "phi_pi": 1.5,
+    "phi_y": 0.125,
+    "rho_a": 0.9,
+    "rho_b": 0.5,
+    "rho_m": 0.5,
+    "sigma_a": 0.7,
+    "sigma_b": 0.5,
+    "sigma_m": 0.25
+  },
+  "validated": true,
+  "validated_basis": "log-deviation SS by construction (all zeros)",
+  "validated_at": "2026-05-11T03:09:52Z",
+  "residuals": {
+    "all": 0.0
+  },
+  "timestamp": "2026-05-11T03:09:52Z"
+}

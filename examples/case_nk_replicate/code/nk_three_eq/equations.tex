@@ -1,0 +1,21 @@
+% nk_three_eq · equations.tex
+% Canonical three-equation New Keynesian model in log-deviations from the
+% zero-inflation deterministic steady state.
+
+\begin{align}
+  y_{t}    &= \mathbb{E}_{t} y_{t+1} - \frac{1}{\sigma}\bigl(r_{t} - \mathbb{E}_{t}\pi_{t+1}\bigr) + \varepsilon_{t}^{b}
+              \label{eq:nk-is} \\
+  \pi_{t}  &= \beta\, \mathbb{E}_{t}\pi_{t+1} + \kappa\, y_{t} - \varepsilon_{t}^{a}
+              \label{eq:nk-nkpc} \\
+  r_{t}    &= \phi_{\pi}\, \pi_{t} + \phi_{y}\, y_{t} + \varepsilon_{t}^{m}
+              \label{eq:nk-taylor} \\
+  \varepsilon_{t}^{a} &= \rho_{a}\, \varepsilon_{t-1}^{a} + \eta_{t}^{a}
+              \label{eq:nk-ar-a} \\
+  \varepsilon_{t}^{b} &= \rho_{b}\, \varepsilon_{t-1}^{b} + \eta_{t}^{b}
+              \label{eq:nk-ar-b} \\
+  \varepsilon_{t}^{m} &= \rho_{m}\, \varepsilon_{t-1}^{m} + \eta_{t}^{m}
+              \label{eq:nk-ar-m}
+\end{align}
+
+% Composite slope of the NKPC:
+% kappa = (1 - theta)(1 - beta*theta)/theta * (sigma + varphi)

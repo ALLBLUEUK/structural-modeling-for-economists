@@ -1,0 +1,26 @@
+claim_id,doc,text_value,source,locator,factor,abs,note
+G01,reports/armington_tariff_analysis.tex,35.83,output/checkpoints/armington_tariff_cf_summary.json,propositions.P1_A_imports_MAN_from_B_value_change_pct,1,1,A 自 B 制造业进口下降（%）
+G02,reports/armington_tariff_analysis.tex,1.78,output/checkpoints/armington_tariff_cf_summary.json,propositions.P1_A_imports_MAN_from_R_value_change_pct,1,0,A 自 R 制造业进口上升（%）
+G03,reports/armington_tariff_analysis.tex,0.70,output/checkpoints/armington_tariff_cf_summary.json,propositions.P1_A_own_MAN_value_change_pct,1,0,A 本地制造业销售上升（%）
+G04,reports/armington_tariff_analysis.tex,0.9935,output/checkpoints/armington_tariff_cf_summary.json,propositions.P2_relative_wage_B_over_A,1,0,B 相对工资
+G05,reports/armington_tariff_analysis.tex,0.0198,output/tables/armington_tariff_cf_summary.csv,row=0;col=welfare_pct,1,0,S1 A 福利（%）
+G06,reports/armington_tariff_analysis.tex,0.0402,output/tables/armington_tariff_cf_summary.csv,row=1;col=welfare_pct,1,1,S1 B 福利（%）
+G07,reports/armington_tariff_analysis.tex,0.0411,output/tables/armington_tariff_cf_summary.csv,row=3;col=welfare_pct,1,1,S2 A 福利（%）
+G08,reports/armington_tariff_analysis.tex,0.0142,output/tables/armington_tariff_cf_summary.csv,row=4;col=welfare_pct,1,1,S2 B 福利（%）
+G09,reports/armington_tariff_analysis.tex,0.061,output/checkpoints/armington_tariff_cf_summary.json,propositions.P3_A_welfare_S2_minus_S1_pp,1,1,A：S2 相对 S1（pp）
+G10,reports/armington_tariff_analysis.tex,0.026,output/checkpoints/armington_tariff_cf_summary.json,propositions.P3_B_welfare_S2_minus_S1_pp,1,0,B：S2 相对 S1（pp）
+G11,reports/armington_tariff_analysis.tex,0.294,output/tables/armington_tariff_cf_summary.csv,row=0;col=decomp_wage_pct,1,0,S1 A 工资项
+G12,reports/armington_tariff_analysis.tex,0.056,output/tables/armington_tariff_cf_summary.csv,row=0;col=decomp_tariff_revenue_pct,1,0,S1 A 关税收入项
+G13,reports/armington_tariff_analysis.tex,0.330,output/tables/armington_tariff_cf_summary.csv,row=0;col=decomp_price_index_pct,1,1,S1 A 价格指数项
+G14,reports/armington_tariff_analysis.tex,0.0199,output/checkpoints/armington_tariff_cf_summary.json,A_welfare_at_optimal_pct,1,0,最优关税处 A 福利（%）
+G15,reports/armington_tariff_analysis.tex,11,output/checkpoints/armington_tariff_cf_summary.json,numerical_optimal_tariff_A_on_B_MAN,100,0,网格最优关税（%）
+G16,reports/armington_tariff_analysis.tex,0.0226,output/tables/armington_tariff_robustness_eps.csv,row=0;col=S1_A_welfare_pct,1,0,ε=2 时 S1 A 福利
+G17,reports/armington_tariff_analysis.tex,0.0104,output/tables/armington_tariff_robustness_eps.csv,row=4;col=S1_A_welfare_pct,1,0,ε=8 时 S1 A 福利
+G18,reports/armington_tariff_analysis.tex,0.191,output/tables/armington_tariff_cf_summary.csv,row=3;col=wage_pct,1,1,S2 A 工资下降（%）
+G19,reports/armington_tariff_analysis.tex,0.096,output/tables/armington_tariff_cf_summary.csv,row=3;col=decomp_price_index_pct,1,0,S2 A 价格指数项
+G20,reports/armington_tariff_analysis.tex,0.083,output/tables/armington_tariff_cf_summary.csv,row=4;col=wage_pct,1,0,S2 B 工资
+G21,reports/armington_tariff_analysis.tex,0.081,output/tables/armington_tariff_cf_summary.csv,row=4;col=decomp_tariff_revenue_pct,1,0,S2 B 关税收入项
+G22,reports/armington_tariff_analysis.tex,0.179,output/tables/armington_tariff_cf_summary.csv,row=4;col=decomp_price_index_pct,1,1,S2 B 价格指数项
+G23,reports/armington_tariff_analysis.tex,0.353,output/tables/armington_tariff_cf_summary.csv,row=1;col=decomp_wage_pct,1,1,S1 B 工资项
+G24,reports/armington_tariff_analysis.tex,0.313,output/tables/armington_tariff_cf_summary.csv,row=1;col=decomp_price_index_pct,1,0,S1 B 价格指数项
+G25,reports/armington_tariff_analysis.tex,0.027,output/tables/armington_tariff_cf_summary.csv,row=2;col=wage_pct,1,0,S1 R 工资

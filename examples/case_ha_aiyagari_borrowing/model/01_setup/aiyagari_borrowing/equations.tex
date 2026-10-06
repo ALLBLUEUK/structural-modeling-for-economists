@@ -1,0 +1,17 @@
+% equations.tex -- aiyagari_borrowing (v2), consistent with spec.md Section 5
+\begin{align}
+& u'(c(a,z)) \ \ge\ \beta(1+r)\sum_{z'} P(z,z')\, u'\big(c(a'(a,z),z')\big),
+  \quad \text{with equality if } a'(a,z) > -\phi(r), \tag{E1}\\
+& c(a,z) + a'(a,z) = (1+r)\,a + w\,z, \qquad a'(a,z) \ge -\phi(r), \tag{E2}\\
+& \Lambda = T(\Lambda;\, a', P), \tag{E3}\\
+& w = (1-\alpha)\left(K^d/L\right)^{\alpha}, \tag{E4}\\
+& r = \alpha\left(K^d/L\right)^{\alpha-1} - \delta, \tag{E5}\\
+& K^s(r) \equiv \int a\, d\Lambda = K^d(r), \tag{E6}\\
+& Y = (K^d)^{\alpha} L^{1-\alpha}, \tag{E7}
+\end{align}
+where $u(c)=c^{1-\mu}/(1-\mu)$, $L=\sum_z z\,\pi_z(z)=1$, and
+\[
+\phi(r)=\begin{cases} b, & r\le 0,\\ \min\{b,\ w(r)\,z_{\min}/r\}, & r>0.\end{cases}
+\]
+The labour-efficiency process is $\log z'=\rho\log z+\varepsilon'$, $\varepsilon'\sim N(0,\sigma^2(1-\rho^2))$,
+discretised by Tauchen (1986) with $n_z=7$, $m=3$, and rescaled so that $\sum_z z\,\pi_z(z)=1$.

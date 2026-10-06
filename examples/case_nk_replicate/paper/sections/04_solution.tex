@@ -1,0 +1,81 @@
+\section{Solution Method}
+\label{sec:solution}
+
+\subsection{Reduced System}
+\label{sec:solution_reduced}
+
+The Taylor rule~\eqref{eq:nk-taylor} determines the nominal interest
+rate algebraically as a contemporaneous function of inflation, output,
+and the policy disturbance. Substituting this rule into the dynamic IS
+curve~\eqref{eq:nk-is} yields a system with two genuinely
+forward-looking jumpers ($y_{t}$ and $\pi_{t}$) and three exogenous
+AR(1) state variables ($\varepsilon_{t}^{a},\varepsilon_{t}^{b},
+\varepsilon_{t}^{m}$). Stacking the variables as
+$\mathbf{y}_{t}=(\varepsilon_{t}^{a},\varepsilon_{t}^{b},
+\varepsilon_{t}^{m},y_{t},\pi_{t})'$, the reduced system is written
+in matrix form as
+\begin{equation}
+  A\,\mathbb{E}_{t}\bigl[\mathbf{y}_{t+1}\bigr]=B\,\mathbf{y}_{t},
+  \label{eq:matrix-form}
+\end{equation}
+with the coefficient matrices
+\begin{equation*}
+  A=
+  \begin{pmatrix}
+    1 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 1/\sigma \\
+    0 & 0 & 0 & 0 & \beta
+  \end{pmatrix},
+  \qquad
+  B=
+  \begin{pmatrix}
+    \rho_{a} & 0 & 0 & 0 & 0 \\
+    0 & \rho_{b} & 0 & 0 & 0 \\
+    0 & 0 & \rho_{m} & 0 & 0 \\
+    0 & -1 & 1/\sigma & 1+\phi_{y}/\sigma & \phi_{\pi}/\sigma \\
+    1 & 0 & 0 & -\kappa & 1
+  \end{pmatrix}.
+\end{equation*}
+The first three rows of each matrix encode the AR(1) transitions of
+the exogenous shocks; the fourth row is the IS curve with the Taylor
+rule substituted in; and the fifth row is the New Keynesian Phillips
+curve.
+
+\subsection{Generalised Schur Decomposition}
+\label{sec:solution_klein}
+
+The rational-expectations solution is computed by the generalised
+Schur (QZ) decomposition of \citet{Klein2000}. The pair $(A,B)$ is
+factored as $A=Q\,T\,Z^{H}$ and $B=Q\,S\,Z^{H}$ with $T,S$
+upper-triangular. The generalised eigenvalues
+$\lambda_{i}=T_{ii}/S_{ii}$ relate to the dynamics-matrix eigenvalues
+$\mu_{i}=1/\lambda_{i}$ of $A^{-1}B$. Stability requires
+$|\mu_{i}|<1$. After reordering so that stable directions come first,
+the policy function is recovered as $\mathbf{j}_{t}=F\,\mathbf{x}_{t}$
+where $\mathbf{j}_{t}=(y_{t},\pi_{t})'$ and
+$\mathbf{x}_{t}=(\varepsilon_{t}^{a},\varepsilon_{t}^{b},
+\varepsilon_{t}^{m})'$.
+
+\subsection{Stability and Numerical Verification}
+\label{sec:solution_stability}
+
+At the calibrated parameters, the QZ decomposition returns five
+generalised eigenvalues with dynamics eigenvalues
+$\{0.90,\,0.50,\,0.50,\,1.154+0.253\,\mathrm{i},\,1.154-0.253\,\mathrm{i}\}$.
+The first three coincide with the shock persistences
+$\rho_{a},\rho_{b},\rho_{m}$ and are stable; the remaining two form a
+complex-conjugate pair with modulus $1.182$ outside the unit circle.
+Three stable and two unstable eigenvalues exactly match the three
+predetermined states and two forward-looking jumpers, so the
+Blanchard--Kahn condition of \citet{BlanchardKahn1980} is satisfied
+and the rational-expectations equilibrium is unique. The numerical
+solver returns the state transition
+\begin{equation}
+  \mathbf{x}_{t+1}=\operatorname{diag}(0.90,\,0.50,\,0.50)\,\mathbf{x}_{t},
+  \label{eq:state-trans}
+\end{equation}
+together with the jumper policy matrix
+$F\in\mathbb{R}^{2\times 3}$ that maps the three states into $y_{t}$
+and $\pi_{t}$.

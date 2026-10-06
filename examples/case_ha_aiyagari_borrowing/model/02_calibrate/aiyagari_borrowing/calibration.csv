@@ -1,0 +1,14 @@
+parameter,value,unit,source_type,source,identification,bounds_lower,bounds_upper,notes
+beta,0.96,annual,A,Aiyagari (1994),literature,0.90,0.99,annual discount factor
+mu,3,unitless,A,Aiyagari (1994) parameter grid,literature,1,5,relative risk aversion (CRRA)
+alpha,0.36,share,A,Aiyagari (1994),literature,0.30,0.40,capital share
+delta,0.08,annual,A,Aiyagari (1994),literature,0.05,0.10,depreciation rate
+rho,0.9,persistence,A,Aiyagari (1994) parameter grid,literature,0.0,0.95,AR(1) persistence of log labour efficiency
+sigma,0.2,log points,A,Aiyagari (1994) parameter grid,literature,0.001,0.4,unconditional s.d. of log labour efficiency
+n_z,7,states,N,Rouwenhorst (v3 per numerics-reviewer),numerical,5,15,income states; robustness 15
+use_rouwenhorst,1,flag,N,numerics-reviewer 2026-10-04,numerical,0,1,1 = Rouwenhorst; 0 = Tauchen (comparison only)
+m,3,s.d.,N,Tauchen (1986),numerical,2,4,Tauchen grid width (used only when use_rouwenhorst = 0)
+n_a,400,points,N,strucmod default,numerical,200,1000,asset grid points (power-2 spacing)
+a_max,100,model units,N,strucmod default,numerical,100,400,asset grid upper bound; mass at top must be < 1e-8
+b,0,model units,A,Aiyagari (1994) baseline (zero borrowing),policy,0,8,exogenous borrowing limit; experiments 0.5 1 2 4 8
+tol_ss,1e-8,relative,N,numerics-reviewer 2026-10-04,numerical,,,steady-state market-clearing tolerance

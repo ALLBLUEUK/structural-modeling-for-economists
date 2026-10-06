@@ -1,0 +1,31 @@
+\section{Phillips-Curve Slope Derivation}
+\label{app:proofs}
+
+The slope of the New Keynesian Phillips curve $\kappa$ stated in
+equation~\eqref{eq:kappa} follows from the standard Calvo derivation; a
+self-contained sketch is reproduced here for completeness. Under
+Calvo-type staggering with reset probability $1-\theta$, log-linearising
+the optimal reset price equation around the zero-inflation steady state
+gives
+\begin{equation}
+  p_{t}^{\star}-p_{t-1}
+  =(1-\beta\theta)\,\mathbb{E}_{t}
+    \sum_{k=0}^{\infty}(\beta\theta)^{k}
+    \bigl(\widehat{mc}_{t+k}+\pi_{t+k}\bigr),
+  \label{eq:reset-price}
+\end{equation}
+where $\widehat{mc}_{t}$ denotes the log-deviation of real marginal cost
+from its steady-state value. The price index obeys
+$\pi_{t}=(1-\theta)(p_{t}^{\star}-p_{t-1})$, and real marginal cost
+satisfies $\widehat{mc}_{t}=(\sigma+\varphi)y_{t}-(1+\varphi)\varepsilon_{t}^{a}$
+under the assumed preferences and technology. Combining these
+expressions and absorbing the technology term into a residual
+$\varepsilon_{t}^{p}\equiv-(1+\varphi)\,(1-\theta)(1-\beta\theta)/\theta\,\varepsilon_{t}^{a}$
+yields the Phillips curve~\eqref{eq:nk-nkpc} with the slope
+\begin{equation}
+  \kappa
+  =\frac{(1-\theta)(1-\beta\theta)}{\theta}\,(\sigma+\varphi).
+\end{equation}
+At $\beta=0.99$, $\theta=0.75$, and $\sigma=\varphi=1$, this evaluates
+to approximately $0.172$, the value used in the main text. A complete
+derivation is given in \citet[][Chapter 3, eq.~(20)]{Gali2008}.

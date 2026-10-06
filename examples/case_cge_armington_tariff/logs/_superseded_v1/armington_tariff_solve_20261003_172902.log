@@ -1,0 +1,5 @@
+2026-10-04 01:29:02,620 [INFO] 原始基期：Y=[21000.0, 24180.0, 58200.0]  D=[-1120.0, 1320.0, -200.0]  ΣD=0.00e+00
+2026-10-04 01:29:02,621 [INFO] 剔除赤字后：Y=[22002.979, 22904.38, 58472.641]  D=7.275957614183426e-12
+2026-10-04 01:29:02,629 [INFO] 数值验证：{'sam_world_deficit_sum': 7.275957614183426e-12, 'sam_income_equals_sales': 0.0, 'sam_expenditure_identity': 0.0, 'zero_shock_what_dev': 0.0, 'zero_shock_What_dev': 0.0, 'acr_max_abs_diff': 2.220446049250313e-16, 'numeraire_neutrality_What_diff': 2.220446049250313e-16, 'two_solver_what_diff': 7.926992395823618e-14, 'iterate_solver_iterations': 41, 'all_pass': True}
+2026-10-04 01:29:02,690 [INFO] [S1] ŵ=[1.002945, 0.996472, 1.000274]  Ŵ=[1.000198, 0.999598, 1.000029]  validated=True
+2026-10-04 01:29:02,693 [INFO] [S2] ŵ=[0.998087, 1.00083, 1.000395]  Ŵ=[0.999589, 0.999858, 1.000071]  validated=True

@@ -1,0 +1,16 @@
+claim_id,doc,text_value,source,locator,factor,abs,note
+R01,paper/sections/05_results.tex,0.259,results/tables/nk_irf_eps_m.csv,row=0;col=y_pct,1,1,产出当期下降（%）
+R02,paper/sections/05_results.tex,0.352,results/tables/nk_irf_eps_m.csv,row=0;col=pi_annualised_pp,1,1,通胀当期下降（年化 pp）
+R03,paper/sections/05_results.tex,0.342,results/tables/nk_irf_eps_m.csv,row=0;col=r_annualised_pp,1,0,名义利率当期上升（年化 pp）
+R04,paper/sections/05_results.tex,0.518,results/tables/nk_irf_eps_m.csv,row=0;col=real_rate_annualised_pp,1,0,实际利率当期上升（年化 pp）
+R05,paper/sections/05_results.tex,0.172,results/checkpoints/nk_policy.json,composite_coeffs.kappa,1,0,菲利普斯曲线斜率 κ
+R06,paper/sections/05_results.tex,0.044,results/tables/nk_irf_eps_m.csv,row=0;col=y_pct,0.1716666667,1,κ·y（季度 %）；factor = κ
+R07,paper/sections/05_results.tex,0.178,results/tables/nk_irf_eps_m.csv,row=0;col=y_pct,0.6866666667,1,年化 4·κ·y；factor = 4κ
+A01,paper/main.tex,0.26,results/tables/nk_irf_eps_m.csv,row=0;col=y_pct,1,1,摘要：产出下降
+A02,paper/main.tex,0.35,results/tables/nk_irf_eps_m.csv,row=0;col=pi_annualised_pp,1,1,摘要：通胀下降
+A03,paper/main.tex,0.52,results/tables/nk_irf_eps_m.csv,row=0;col=real_rate_annualised_pp,1,0,摘要：实际利率上升
+K01,paper/sections/07_conclusion.tex,0.26,results/tables/nk_irf_eps_m.csv,row=0;col=y_pct,1,1,结论：产出下降
+K02,paper/sections/07_conclusion.tex,0.35,results/tables/nk_irf_eps_m.csv,row=0;col=pi_annualised_pp,1,1,结论：通胀下降
+K03,paper/sections/07_conclusion.tex,0.52,results/tables/nk_irf_eps_m.csv,row=0;col=real_rate_annualised_pp,1,0,结论：实际利率上升
+M01,paper/sections/03_calibration.tex,0.1717,results/checkpoints/nk_policy.json,composite_coeffs.kappa,1,0,校准节：κ
+M02,paper/appendix/A_proofs.tex,0.172,results/checkpoints/nk_policy.json,composite_coeffs.kappa,1,0,附录 A：κ

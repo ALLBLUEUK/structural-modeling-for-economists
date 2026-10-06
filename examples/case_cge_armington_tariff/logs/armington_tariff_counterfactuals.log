@@ -1,0 +1,54 @@
+{
+ "model": "armington_tariff",
+ "disclaimer": "示意数据，结论仅为机制示范",
+ "propositions": {
+  "P1_A_imports_MAN_from_B_value_change_pct": -35.83237595759612,
+  "P1_A_imports_MAN_from_R_value_change_pct": 1.7804985567903664,
+  "P1_A_own_MAN_value_change_pct": 0.7006744189379521,
+  "P2_relative_wage_B_over_A": 0.9935466163272092,
+  "P3_A_welfare_S2_minus_S1_pp": -0.06096988910374579,
+  "P3_B_welfare_S2_minus_S1_pp": 0.02602761890913019,
+  "P1_pass": true,
+  "P2_pass": true
+ },
+ "robustness_eps_MAN": [
+  {
+   "eps_MAN": 2,
+   "S1_A_welfare_pct": 0.022625443700130532,
+   "S1_B_welfare_pct": -0.03480719524689979,
+   "S2_A_welfare_pct": -0.04055378533970311,
+   "S2_B_welfare_pct": -0.002482298066208699
+  },
+  {
+   "eps_MAN": 3,
+   "S1_A_welfare_pct": 0.02168791933134795,
+   "S1_B_welfare_pct": -0.03833338572986067,
+   "S2_A_welfare_pct": -0.04078778286984441,
+   "S2_B_welfare_pct": -0.009016861813448962
+  },
+  {
+   "eps_MAN": 4,
+   "S1_A_welfare_pct": 0.01982950523335969,
+   "S1_B_welfare_pct": -0.04021679644338194,
+   "S2_A_welfare_pct": -0.0411403838703861,
+   "S2_B_welfare_pct": -0.014189177534229547
+  },
+  {
+   "eps_MAN": 6,
+   "S1_A_welfare_pct": 0.015171457721385728,
+   "S1_B_welfare_pct": -0.041377938843834006,
+   "S2_A_welfare_pct": -0.04200867451009671,
+   "S2_B_welfare_pct": -0.02170218279317071
+  },
+  {
+   "eps_MAN": 8,
+   "S1_A_welfare_pct": 0.010442379076325281,
+   "S1_B_welfare_pct": -0.040829221626326184,
+   "S2_A_welfare_pct": -0.04274650092812582,
+   "S2_B_welfare_pct": -0.026699696949217255
+  }
+ ],
+ "S1_A_welfare_sign_flip_eps": [],
+ "numerical_optimal_tariff_A_on_B_MAN": 0.11,
+ "A_welfare_at_optimal_pct": 0.019856577155130672
+}
