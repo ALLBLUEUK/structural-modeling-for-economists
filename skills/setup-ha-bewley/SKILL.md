@@ -65,4 +65,4 @@ type: setup
 5. 必做的极限检验：取 `--set sigma=0.001 --set r_hi_eps=1e-8`，利率应回到 1/β − 1、储蓄率应回到完全市场基准。
 6. 求解后调用 `numerics-reviewer`；对外报告前用 `scripts/replicate_compare.py` 与 `scripts/check_claims.py`（见 `replicate`）。
 
-验收案例：`结项/工作流验收/case_ha_aiyagari_borrowing/`（借贷限额的比较静态）。
+验收案例：`examples/case_ha_aiyagari_borrowing/`（借贷限额的比较静态）。

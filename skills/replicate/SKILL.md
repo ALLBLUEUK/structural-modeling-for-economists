@@ -111,4 +111,4 @@ python scripts/replicate_compare.py --cmd "bash run_all.sh"     --compare output
 
 建议：每个项目根目录放一个 `run_all.sh` 作为复现入口；论文定稿前对摘要、正文、结论中的每个数字都登记 claims。差值类数字（如“上升 0.22 个百分点”）无法直接定位时，在报告中由 verifier 人工核对并注明。
 
-验收：对 v0.2 示范论文的核对发现两处数字错误（见 `结项/工作流验收/case_nk_replicate/`）。
+验收：对 v0.2 示范论文的核对发现两处数字错误（见 `examples/case_nk_replicate/`）。

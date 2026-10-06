@@ -90,6 +90,19 @@
 - 修订：逐项处理 11 项必改；新增财富分布图作为证据；表 2 改为由检查点自动生成；新增 1 条 claims（共 19 条），全部一致
 - 结果：写作评审复核通过（见 `quality_reports/aiyagari_borrowing_paper_review_20261004.md` 末尾）
 
+### 03:00 / 19:31 · 步骤 16: 写作评审复核与措辞修订
+- 03:00 写作评审对修订稿复核通过
+- 19:31 起按项目组要求对报告措辞做文风修订（去掉破折号与口语化表述，不改动任何数字），修订后重新编译，并用 `check_claims.py` 重新核对 19 条数字，全部一致（`quality_reports/aiyagari_borrowing_report_final_claims_*.md`）
+- 结果：通过
+
+### 2026-10-06 · 步骤 17: 按最终状态重新复现
+- 用 `replicate_compare.py` 重新运行 `run_all.sh`，比对 4 个检查点、2 个结果表和 2 个 LaTeX 表，全部一致（`quality_reports/aiyagari_borrowing_replicate_20261006_*.md`）
+- 结果：通过
+
+### 2026-10-06 · 步骤 18: 公开发布
+- 本案例随 strucmod v0.3.0 发布于 GitHub（仓库 examples 目录，提交 1dbf09c）
+- 结果：通过
+
 ## 产物清单
 
 - [x] `model/01_setup/aiyagari_borrowing/spec.md`（v3）、`equations.tex`

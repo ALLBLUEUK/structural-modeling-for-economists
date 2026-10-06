@@ -67,4 +67,4 @@ type: setup
 5. 用 `python scripts/check_walras.py output/checkpoints/<model>_<scenario>.json --tol 1e-9` 复核 Walras 律。
 6. 情形汇总、贸易弹性稳健性与最优关税等反事实写在单独脚本中（`counterfactual-run`），调用 solve.py 的函数；注意每换一个弹性都要重新剔除赤字。
 
-验收案例：`结项/工作流验收/case_cge_armington_tariff/`（示意数据下的单边关税与对等报复）。
+验收案例：`examples/case_cge_armington_tariff/`（示意数据下的单边关税与对等报复）。

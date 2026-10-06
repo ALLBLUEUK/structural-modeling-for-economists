@@ -78,6 +78,18 @@
 - 修订：逐项处理 12 项必改与 verifier 的声明意见；新增 8 条 claims（共 25 条），全部一致
 - 结果：写作评审第一次复核提出 2 项小问题（附录措辞、关税收入符号与地区标签重名），修改后第二次复核通过（见 `quality_reports/armington_tariff_paper_review_20261004.md` 末尾）
 
+### 19:31 · 步骤 13: 措辞修订与最终核对
+- 按项目组要求对报告措辞做文风修订（不改动任何数字），重新编译，并用 `check_claims.py` 重新核对 25 条数字，全部一致（`quality_reports/armington_tariff_report_final_claims_*.md`）
+- 结果：通过
+
+### 2026-10-06 · 步骤 14: 按最终状态重新复现
+- 用 `replicate_compare.py` 重新运行 `run_all.sh`，比对 8 个产物，全部一致（`quality_reports/armington_tariff_replicate_20261006_*.md`）
+- 结果：通过
+
+### 2026-10-06 · 步骤 15: 公开发布
+- 本案例随 strucmod v0.3.0 发布于 GitHub（仓库 examples 目录，提交 1dbf09c）
+- 结果：通过
+
 ## 产物清单
 
 - [x] `model/01_setup/armington_tariff/spec.md`（v3）
